@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="static/css/base.css">
 
         <link rel="stylesheet" href="static/css/contact.css">
-        <link rel="stylesheet" href="static/css/live.css">
+
 
     </head>
     <body>
@@ -38,14 +38,12 @@
                 <div class="navigate">
                     <div class="nav-body">
                         <div class="logo">
-                            <a id="logo" href="/">BTCINAISA</a>
+                            <a id="logo" href="https://raw.githack.com/honhosing/btcinasia-web/page/home.html">BTCINAISA</a>
                         </div>
                         <div class="nav-right">
-                            <a href="/">Home</a>
-                            <a href="/podcast">Podcast</a>
-                            <a class="live-link" href="/live">Live<i class="fa fa-fire" aria-hidden="true"></i></a>
-                            <a href="/">Blog</a>
-                            <a href="/contact">Contact</a>
+                            <a href="https://raw.githack.com/honhosing/btcinasia-web/page/home.html">Home</a>
+                            <a class="live-link" href="https://raw.githack.com/honhosing/btcinasia-web/page/live.html">Live<i class="fa fa-fire" aria-hidden="true"></i></a>
+                            <a href="https://raw.githack.com/honhosing/btcinasia-web/page/contact.html">Contact</a>
                         </div>
                         <div class="navigate-mobile" style="display: none">
                             <input type="checkbox" id="toggler">
@@ -57,11 +55,9 @@
                             </label>
                             <div class="nav-items">
                                 <ul>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/podcast">Podcast</a></li>
-                                    <li class="live-link"><a href="/live">Live</a></li>
-                                    <li><a href="/">Blog</a></li>
-                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="https://raw.githack.com/honhosing/btcinasia-web/page/home.html">Home</a></li>
+                                    <li class="live-link"><a href="https://raw.githack.com/honhosing/btcinasia-web/page/live.html">Live</a></li>
+                                    <li><a href="https://raw.githack.com/honhosing/btcinasia-web/page/contact.html">Contact</a></li>
                                 </ul>
                                 <div>
                                     <a href="https://www.bitcoinmagazine.com">
@@ -75,46 +71,47 @@
     <div class="main-container">
         <div class="contain-body">
             <div class="contact-title">
-                <h3>{{ live_title }}</h3>
+                <h3>About Bitcoin in Asia</h3>
             </div>
-            <div>
-                <iframe id="liveplayer" width="560" height="315" src="https://www.youtube.com/embed/{{ live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="contact-content">
+                <p><strong>Bitcoin in Asia</strong> is a new character interview program created by Bitcoin Magazine and hosted by John Riggins, head of global operations of BTC Inc. It aims to talk to whales, opinion leaders, experts and analysts of the blockchain industry in Asia and break the information gap between east and west.</p>
+                <div class="person-in-content" style="display: none;">
+                    <img class="person-logo" src="static/img/bitcoin-magazine-full-color-dark.svg" alt="">
+                    <img class="person-circle" src="static/img/john.svg" alt="">
+                    <span class="person-tag">John Riggins</span>
+                </div>
+                <h5>What is Bitcoin Magazine?</h5>
+                <p>As the oldest publication dedicated to covering Bitcoin and its diverse community, Bitcoin Magazine was launched by two original members of the cryptocurrency space who felt that the media coverage around the digital revolution was severely lacking. Initially launched as a print publication, Bitcoin Magazine’s mission has always been to serve as the world’s most-trusted source of Bitcoin, blockchain and cryptocurrency news. When founder Vitalik Buterin decided to focus his time on launching Ethereum, BTC Inc purchased Bitcoin Magazine and relaunched its web presence, improving its coverage and global readership to millions of people worldwide.</p>
+                <p>October 2016 — A print issue of Bitcoin Magazine is hung in the halls of the Smithsonian Museum as part of its “Value of Money” exhibit.</p>
             </div>
-            <div>
-                <iframe id="liveplayer-mobile" width="400" height="249" src="https://www.youtube.com/embed/{{ live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="email">
+                <div class="email-title">email</div>
+                <div class="email-address">john@btcmedia.org</div>
+            </div>
+            <div class="location">
+                <div class="location-title">location</div>
+                <div class="location-city">Nashville</div>
+                <div class="location-info">
+                    The Pinnacle at Symphony Place<br />
+                    150 3rd Ave. S<br />
+                    Suite #1820<br />
+                    Nashville, TN 37201
+                </div>
+                <div class="location-city">Shanghai</div>
+                <div class="location-info">
+                    463 Tanggu Lu<br />
+                    Shanghai, China
+                </div>
+            </div>
+            <div class="person">
+                <img class="person-shadow" src="static/img/john.svg" alt="">
+                <img src="static/img/john.svg" alt="">
+                <div class="person-line">
+                    <div>John Riggins</div>
+                </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        function live() {
-            var liveplay = document.getElementById("liveplayer");
-            var liveplayMobile = document.getElementById("liveplayer-mobile");
-            var Width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if ( Width < 560 ) {
-                liveplay.style.display = "none";
-                liveplayMobile.style.display = "block";
-            } else {
-                liveplay.style.display = "block";
-                liveplayMobile.style.display = "none";
-            }
-        }
-
-        live();
-
-        window.onresize = function () {
-            var Width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            var liveplay = document.getElementById("liveplayer");
-            var liveplayMobile = document.getElementById("liveplayer-mobile");
-            if ( Width < 560 ) {
-                liveplay.style.display = "none";
-                liveplayMobile.style.display = "block";
-            } else {
-                liveplay.style.display = "block";
-                liveplayMobile.style.display = "none";
-            }
-        }
-    </script>
-
                 <div class="footer">
                     <div class="footer-body">
                         <div class="footer-title">

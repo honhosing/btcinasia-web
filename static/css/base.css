@@ -70,7 +70,7 @@ a#logo:hover {
     position: relative;
 }
 .banner {
-    background: url("/static/img/banner-example.jpg");
+    background-image: url("static/img/banner-example.jpg");
     background-size: cover;
     color: white;
     text-align: center;

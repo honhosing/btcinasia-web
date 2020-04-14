@@ -1,11 +1,77 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{% block title %}
-    Bitcoin in Asia Podcast
-{% endblock %}
+        <title>Bitcoin in Asia</title>
 
-{% block main %}
+        <meta name="keywords" content="bitcoin-asia-podcast" />
+        <meta name="description" content="Bitcoin in Asia Podcast with John Riggins">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{% static '/img/favicon.ico' %}" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="{% static '/img/apple-touch-icon.png' %}">
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+        <!-- Web Fonts  -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7COpen+Sans:400,700,800" rel="stylesheet" type="text/css">
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/vendor/animate/animate.min.css">
+        <link rel="stylesheet" href="static/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="static/css/base.css">
+
+        <link rel="stylesheet" href="static/css/contact.css">
+
+
+    </head>
+    <body>
+        <div class="main-body">
+            <div class="main-box">
+                <div class="navigate">
+                    <div class="nav-body">
+                        <div class="logo">
+                            <a id="logo" href="/">BTCINAISA</a>
+                        </div>
+                        <div class="nav-right">
+                            <a href="/">Home</a>
+                            <a href="/podcast">Podcast</a>
+                            <a class="live-link" href="/live">Live<i class="fa fa-fire" aria-hidden="true"></i></a>
+                            <a href="/">Blog</a>
+                            <a href="/contact">Contact</a>
+                        </div>
+                        <div class="navigate-mobile" style="display: none">
+                            <input type="checkbox" id="toggler">
+                            <label for="toggler">
+                                <div class="hamburger-container">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </label>
+                            <div class="nav-items">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/podcast">Podcast</a></li>
+                                    <li class="live-link"><a href="/live">Live</a></li>
+                                    <li><a href="/">Blog</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                </ul>
+                                <div>
+                                    <a href="https://www.bitcoinmagazine.com">
+                                        <img id="bitcoinmagazine" src="static/img/bitcoin-magazine-full-color-dark.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     <div class="main">
         <div class="banner">
             <div class="banner-title">Bitcoin in Asia</div>
@@ -58,5 +124,51 @@
             </div>
         </div>
     </div>
+</div>
+                <div class="footer">
+                    <div class="footer-body">
+                        <div class="footer-title">
+                            <a href="" id="footer-logo">BTCINAISA</a>
+                        </div>
+                        <ul class="social-icon">
+                            <li class="twitter"><a href="" ><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="youtube"><a href="" ><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li class="facebook"><a href="" ><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="bitcoinmagazine"><a href="https://bitcoinmagazine.com/"><img src="static/img/bm-logo-small.svg"></a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <div class="copyright-info">© 2020 BTC Inc.</div>
+                        <a href="https://b.tc"><img src="static/img/btc-inc.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-{% endblock %}
+        <!-- Vendor -->
+{#      <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>#}
+
+        <!-- Theme Base, Components and Settings -->
+        <script src="static/js/jquery/jquery.min.js"></script>
+        <script src="static/js/jquery/jquery.js"></script>
+
+        <!-- Theme Custom -->
+        <script src="static/js/custom.js"></script>
+
+        <!-- Examples -->
+
+        <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-12345678-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+         -->
+
+    </body>
+</html>
+
