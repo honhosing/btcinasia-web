@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Bitcoin in Asia Podcast
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="banner">
+            <div class="banner-title">Bitcoin in Asia</div>
+            <div class="banner-subtitle">Podcast with John Riggins</div>
+            <a href="/contact" class="banner-link">
+                <span>Learn More ></span>
+            </a>
+            <img src="/static/img/logo-01.png" class="banner-logo">
+        </div>
+        <div class="main-block">
+            {% for podcast in podcasts %}
+            <div class="main-item" onclick="javascript:location.href='/podcast/{{ podcast.id }}'">
+                <div class="item-body">
+                    <div class="item-image">
+                        <img src="/media/{{ podcast.cover }}">
+                    </div>
+                    <div class="item-title">{{ podcast.title }}</div>
+                    <div class="item-content">{{ podcast.content | truncatewords:30 | safe }}</div>
+                    <div class="podcast-tools">
+                        {% if podcast.pk == new_podcast_pk %}
+                            <div class="new-badge">NEW</div>
+                        {% endif %}
+                        <div class="podcast-categories">
+                            <a href="" rel="category">Audio</a>
+                            <a href="podcast/type/{{ podcast.podcast_type }}" rel="category" style="text-transform: capitalize;">{{ podcast.podcast_type }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+                <div class="main-item">
+                    <div class="item-body">
+                        <div class="item-image">
+                            <img src="/static/img/space.jpg">
+                        </div>
+                        <div class="item-title">There is no podcast, TBA</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="contact" id="contact">
+            <div class="contact-body">
+                <div class="contact-title">Let's Contact Us</div>
+                <div class="contact-subtitle">Become our next podcast guests</div>
+                <div class="contact-button" onclick="javascript:location.href='/contact'">contact</div>
+                <div class="contact-image">
+                    <img class="normal" src="/static/img/logo-black.png" alt="">
+                    <img class="logo-shadow" src="/static/img/logo-black.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

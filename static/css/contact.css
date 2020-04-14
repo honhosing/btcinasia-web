@@ -1,0 +1,173 @@
+.main-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contain-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    margin: 10px;
+    min-height: calc(100vh - 340px);
+}
+.main-container .podcast-cover {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+}
+.main-container .podcast-title {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+}
+.main-container .podcast-title h3 {
+    background-color: rgba(0,0,0,0.6);
+    width: calc(100vw - 20px);
+    max-width: 750px;
+    padding: 10px;
+    display: block;
+}
+.podcast-audio {
+    width: 100%;
+    position: relative;
+}
+.podcast-audio audio {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+.podcast-content {
+    text-align: justify;
+}
+.podcast-content p {
+    font-size: 18px;
+}
+.podcast-content a {
+    color: #ff9400;
+}
+.podcast-content:first-letter {
+    float: left;
+    font-size: 3rem;
+    padding-right: 3px;
+    text-transform:uppercase;
+    line-height: 2.5rem;
+    font-weight: 600;
+    padding-top: 0.4rem;
+}
+
+@media screen and (max-width: 500px){
+    .contain-body {
+        padding: 0 20px;
+    }
+    .person {
+        display: none;
+    }
+    .person-in-content {
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+        position: relative;
+    }
+    .person-logo {
+        filter: invert(1) opacity(.5);
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        width: 300px;
+        height: 300px;
+        margin-top: -50px;
+    }
+    .person-in-content img.person-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid #ff9400;
+        z-index: 1;
+    }
+    .person-tag {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        background-color: #ff9400;
+        color: white;
+        padding: 0 5px;
+    }
+}
+
+
+.contain-body {
+    position: relative;
+    margin-bottom: 40px;
+}
+.contact-title {
+    margin: 40px 0;
+}
+.contact-content strong {
+    font-size: 20px;
+}
+.contact-content h5 {
+    margin: 20px 0;
+}
+.location, .email {
+    margin-top: 40px;
+    align-self: flex-start;
+}
+.location .location-title, .email-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.location .location-city, .email-address {
+    padding-left: 10px;
+    border-left: 5px solid #ff9400;
+    margin-top: 10px;
+
+}
+.location .location-info {
+    padding-left: 15px;
+    color: #1b1e21;
+    font-weight: 100;
+}
+.person {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.person img {
+    height: 35vh;
+    position: relative;
+}
+.person img.person-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(.5) blur(6px);
+}
+.person .person-line {
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 80%;
+    background-color: #ff9400;
+    z-index: 5;
+}
+.person .person-line div {
+    color: white;
+    padding-left: 20px;
+    font-size: 1.8rem;
+    line-height: 0.3rem;
+    text-shadow: 0 0 10px black;
+}
+
+
+.live-content div#app {
+    width: 800px;
+}

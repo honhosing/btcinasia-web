@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ podcast.title }}{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static '/css/live.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="main-container">
+        <div class="contain-body">
+            <div class="contact-title">
+                <h3>{{ live_title }}</h3>
+            </div>
+            <div>
+                <iframe id="liveplayer" width="560" height="315" src="https://www.youtube.com/embed/{{ live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe id="liveplayer-mobile" width="400" height="249" src="https://www.youtube.com/embed/{{ live_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function live() {
+            var liveplay = document.getElementById("liveplayer");
+            var liveplayMobile = document.getElementById("liveplayer-mobile");
+            var Width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            if ( Width < 560 ) {
+                liveplay.style.display = "none";
+                liveplayMobile.style.display = "block";
+            } else {
+                liveplay.style.display = "block";
+                liveplayMobile.style.display = "none";
+            }
+        }
+
+        live();
+
+        window.onresize = function () {
+            var Width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var liveplay = document.getElementById("liveplayer");
+            var liveplayMobile = document.getElementById("liveplayer-mobile");
+            if ( Width < 560 ) {
+                liveplay.style.display = "none";
+                liveplayMobile.style.display = "block";
+            } else {
+                liveplay.style.display = "block";
+                liveplayMobile.style.display = "none";
+            }
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ podcast.title }}{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="main-container">
+        <div class="contain-body">
+            <div class="contact-title">
+                <h3>About Bitcoin in Asia</h3>
+            </div>
+            <div class="contact-content">
+                <p><strong>Bitcoin in Asia</strong> is a new character interview program created by Bitcoin Magazine and hosted by John Riggins, head of global operations of BTC Inc. It aims to talk to whales, opinion leaders, experts and analysts of the blockchain industry in Asia and break the information gap between east and west.</p>
+                <div class="person-in-content" style="display: none;">
+                    <img class="person-logo" src="/static/img/bitcoin-magazine-full-color-dark.svg" alt="">
+                    <img class="person-circle" src="/static/img/john.svg" alt="">
+                    <span class="person-tag">John Riggins</span>
+                </div>
+                <h5>What is Bitcoin Magazine?</h5>
+                <p>As the oldest publication dedicated to covering Bitcoin and its diverse community, Bitcoin Magazine was launched by two original members of the cryptocurrency space who felt that the media coverage around the digital revolution was severely lacking. Initially launched as a print publication, Bitcoin Magazine’s mission has always been to serve as the world’s most-trusted source of Bitcoin, blockchain and cryptocurrency news. When founder Vitalik Buterin decided to focus his time on launching Ethereum, BTC Inc purchased Bitcoin Magazine and relaunched its web presence, improving its coverage and global readership to millions of people worldwide.</p>
+                <p>October 2016 — A print issue of Bitcoin Magazine is hung in the halls of the Smithsonian Museum as part of its “Value of Money” exhibit.</p>
+            </div>
+            <div class="email">
+                <div class="email-title">email</div>
+                <div class="email-address">john@btcmedia.org</div>
+            </div>
+            <div class="location">
+                <div class="location-title">location</div>
+                <div class="location-city">Nashville</div>
+                <div class="location-info">
+                    The Pinnacle at Symphony Place<br />
+                    150 3rd Ave. S<br />
+                    Suite #1820<br />
+                    Nashville, TN 37201
+                </div>
+                <div class="location-city">Shanghai</div>
+                <div class="location-info">
+                    463 Tanggu Lu<br />
+                    Shanghai, China
+                </div>
+            </div>
+            <div class="person">
+                <img class="person-shadow" src="/static/img/john.svg" alt="">
+                <img src="/static/img/john.svg" alt="">
+                <div class="person-line">
+                    <div>John Riggins</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

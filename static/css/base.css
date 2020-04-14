@@ -1,0 +1,560 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+    width: 100vw;
+}
+.navigate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    border-bottom: 1px solid #ececec;
+    font-weight: 400;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /*width: calc(100vw - 10px);*/
+}
+.nav-body {
+    display: flex;
+    line-height: 60px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.logo {
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+a#logo {
+    font-family: "Titillium Web";
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    color: black;
+    cursor: pointer;
+    margin-left: 20px;
+    text-decoration: none;
+}
+a#logo:hover {
+    color: orange;
+}
+.nav-right {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+    flex-grow: 0;
+}
+.nav-right a {
+    color: #282828;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    height: 60px;
+    display: inline-block;
+    padding: 0 14px;
+}
+.nav-right a:hover {
+    border-bottom: 2px solid orange;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    position: relative;
+}
+.banner {
+    background: url("/static/img/banner-example.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    width: calc(100vw - 10px);
+    max-width: 1000px;
+    border-radius: 5px;
+    padding: 40px;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+    opacity: 0.5;
+    z-index: 1;
+}
+.banner .banner-title {
+    font-size: 65px;
+    z-index: 2;
+    position: relative;
+}
+.banner-subtitle {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 10px 0;
+    position: relative;
+    z-index: 2;
+}
+a.banner-link {
+    z-index: 2;
+    position: relative;
+    font-size: 18px;
+    color: #86DAFF;
+    padding: 5px 10px;
+}
+a.banner-link span {
+    line-height: 160%;
+}
+img.banner-logo {
+    z-index: 2;
+    position: relative;
+    width: 150px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.main-block {
+    display: flex;
+    width: calc(100vw - 10px);
+    max-width: 1010px;
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+.main-item {
+    position: relative;
+    z-index: 3;
+}
+.main-item a {
+    text-decoration: none;
+    color: #282828;
+}
+.main-item .item-body {
+    position: relative;
+    z-index: 3;
+    background-color: #f7f7f7;
+    max-width: 495px;
+    width: calc(50vw - 20px);
+    margin: 5px;
+    border-radius: 5px;
+    padding: 40px;
+}
+.main-item .item-image {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-height: 200px;
+    overflow: hidden;
+    z-index: 3;
+}
+.main-item .item-image img {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    z-index: 3;
+}
+.item-body:hover {
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+/*.main-item:hover::after {*/
+    /*z-index: 1;*/
+    /*position: absolute;*/
+    /*content: "";*/
+    /*top: 2px;*/
+    /*left: 2px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-color: rgba(0,0,0,0.3);*/
+    /*-ms-filter: blur(10px);*/
+    /*filter: blur(10px);*/
+/*}*/
+.main-item .item-title {
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+    margin: 5px 0;
+    font-size: 18px;
+}
+.main-item .item-content {
+    font-size: 14px;
+    color: #777;
+    position: relative;
+    z-index: 3;
+}
+.podcast-tools {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.podcast-tools .new-badge {
+    background: rgb(247, 149, 46);
+    font-size: 13px;
+    color: white;
+    padding: 0 10px;
+    border-radius: 4px;
+    display: flex;
+    font-weight: 600;
+}
+.podcast-tools .podcast-categories {
+    font-size: 13px;
+    color: #282828;
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.podcast-tools .podcast-categories a {
+    color: rgb(247, 149, 46);
+    margin-left: 5px;
+    font-weight: 600;
+    background-color: #eee;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+
+.contact {
+    width: calc(100vw - 10px);
+    max-width: 1000px;
+    position: relative;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contact .contact-body {
+    width: 100vw;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 40px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #282828;
+    position: relative;
+}
+.contact .contact-title {
+    font-size: 50px;
+}
+.contact .contact-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+}
+.contact .contact-image {
+    position: relative;
+    overflow: hidden;
+}
+.contact .contact-body .contact-button {
+    margin-top: 20px;
+    line-height: 40px;
+    border-radius: 4px;
+    position: relative;
+    background-color: #282828;
+    color: white;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact .contact-body .contact-button:hover {
+    background-color: orange;
+}
+.contact .contact-body img.normal {
+    margin-top: 30px;
+    margin-bottom: -30px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.contact .contact-body img.logo-shadow {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    width: 100%;
+    -ms-filter: blur(5px);
+    filter: grayscale(0.8) blur(6px);
+    z-index: 1;
+}
+
+
+.footer {
+    margin-top: 20px;
+    /*width: calc(100vw - 10px);*/
+    background-color: black;
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    flex-direction: column;
+}
+.footer .footer-body {
+    width: 100vw;
+    max-width: 1000px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.footer .footer-title {
+    display: flex;
+    flex-grow: 1;
+}
+.footer a#footer-logo {
+    font-family: "Titillium Web";
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.footer .social-icon {
+    margin: 0 20px 0 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.footer .social-icon li, .footer .social-icon li i {
+    display: flex;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.footer .social-icon li {
+    margin: 0 10px;
+}
+.footer .social-icon li.bitcoinmagazine {
+    display: flex;
+    filter: grayscale(1) brightness(1);
+}
+.footer .social-icon li.bitcoinmagazine img {
+    height: 16px;
+    width: auto;
+}
+.footer .social-icon li.twitter i:hover {
+    color: #5baadc;
+}
+.footer .social-icon li.youtube i:hover {
+    color: #ea3323;
+}
+.footer .social-icon li.facebook i:hover {
+    color: #2d7aec;
+}
+.footer .social-icon li.bitcoinmagazine:hover {
+    filter: none;
+}
+.footer .copyright {
+    width: 100vw;
+    max-width: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    margin-bottom: 10px;
+}
+.footer .copyright .copyright-info {
+    flex: 1;
+}
+.footer .copyright img {
+    filter: invert(1);
+    width: 26px;
+}
+.live-link i {
+    color: red;
+}
+
+
+@media screen and (max-width: 700px) {
+    .live-link {
+        background: linear-gradient(to right, #ffc800 0%,#ec0000 100%);
+    }
+
+    .nav-right {
+        display: none;
+    }
+    .navigate-mobile {
+        display: flex!important;
+    }
+
+    .banner {
+        margin: 5px 0;
+    }
+    .banner .banner-title {
+        font-size: 50px;
+    }
+    .banner .banner-subtitle {
+        font-size: 20px;
+    }
+
+    .main-block {
+        flex-direction: column;
+    }
+    .item-body {
+        width: calc(100vw - 10px)!important;
+    }
+
+    .contact-title {
+        font-size: 2.3em!important;
+    }
+    .contact-subtitle {
+        font-size: 20px!important;
+    }
+    .contact .contact-body img.normal {
+        margin-bottom: -10px;
+    }
+
+    .footer .copyright {
+        max-width: 130px;
+    }
+    .footer .copyright .copyright-info {
+        font-size: 12px;
+    }
+}
+
+
+.hamburger-container {
+    display: block;
+    width: 40px;
+    height: 40px;
+    /*border: 1px solid blue;*/
+    position: relative;
+    top: 20px;
+    z-index: 99;
+    margin-right: 20px;
+}
+
+.hamburger-container span {
+    display: block;
+    height: 4px;
+    /*background-color: #f7952e;*/
+    background-color: #282828;
+    position: relative;
+    transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+    top: 0;
+}
+
+.hamburger-container span:nth-child(2) {
+    margin-top: 10px;
+}
+
+#toggler:checked + label .hamburger-container span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+    background-color: white;
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler:checked + label .hamburger-container span:nth-child(2) {
+    transform: rotate(-45deg);
+    top: -6px;
+    background-color: white;
+    transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+#toggler {
+    display: none;
+}
+
+.nav-items {
+    /*background-color: rgba(247, 149, 46, 0.78);*/
+    background-color: rgba(51, 51, 51, 1);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 76px;
+    transform: scaleY(0);
+    transition: transform .3s ease-in-out;
+    transform-origin: 50% 0;
+    z-index: 10;
+}
+
+#toggler:checked ~ .nav-items {
+    transform: scaleY(1);
+}
+
+.nav-items>ul {
+    padding: 20px 10% 0 10%;
+    list-style-type: none;
+}
+
+.nav-items>ul>li {
+    text-align: center;
+    font-size: 24px;
+    /*font-weight: bold;*/
+    margin: 30px 0;
+    border-left: 4px solid orange;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border-radius: 3px;
+}
+.nav-items>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+#toggler-type {
+    display: none;
+}
+#toggler-type + li {
+    height: 25px;
+    transition: height .3s ease-in-out;
+}
+
+.nav-type-items {
+    padding-top: 0;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: transform .3s ease-in-out;
+}
+.nav-type-items>li {
+    background: rgba(0,0,0,0.2);
+    margin: 10px 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.nav-type-items li:nth-child(1) {
+    margin-top: 20px;
+}
+
+#toggler-type:checked + li {
+    height: 222px;
+    transition: height .3s ease-in-out;
+}
+
+#toggler-type:checked + li>label>ul {
+    transform: scaleY(1);
+    transition: transform .3s ease-in-out;
+}
+
+#bitcoinmagazine {
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -60px;
+}
+
